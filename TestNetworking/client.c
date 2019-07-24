@@ -64,7 +64,6 @@ int connectAndRead(char *error, size_t errorLength, void (^onRead)(char *)) {
                 }
 
                 onRead(buffer);
-//                fputs(buffer, stdout);
             }
         }
 

@@ -5,4 +5,4 @@
 
 int connectAndRead(char *error, size_t errorLength, void (^onRead)(char *));
 
-#endif /* client_h */
+#endif

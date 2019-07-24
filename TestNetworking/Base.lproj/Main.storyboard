@@ -19,42 +19,75 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Received" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJz-0P-z8b">
-                                <rect key="frame" x="30" y="44" width="139" height="36"/>
+                                <rect key="frame" x="30" y="44" width="354" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YD7-a3-QtS">
-                                <rect key="frame" x="30" y="419" width="354" height="0.0"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="textColor" red="0.9215686917" green="0.070588238540000001" blue="0.149019599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Waiting..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="T72-SH-R7S">
-                                <rect key="frame" x="30" y="100" width="354" height="300"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="tr9-Mn-qWK"/>
-                                </constraints>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="T72-SH-R7S">
+                                <rect key="frame" x="30" y="100" width="354" height="682"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Waiting...
+</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="seL-q8-5dU">
+                                <rect key="frame" x="30" y="782" width="354" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YD7-a3-QtS">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="29"/>
+                                        <color key="textColor" red="0.9215686917" green="0.070588238540000001" blue="0.149019599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xH-hm-IEK">
+                                        <rect key="frame" x="0.0" y="20" width="354" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="WQS-EN-bFF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                        <state key="normal" title="Reconnect">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="connect" destination="BYZ-38-t0r" eventType="touchUpInside" id="TpH-hr-C65"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="YD7-a3-QtS" firstAttribute="leading" secondItem="seL-q8-5dU" secondAttribute="leading" id="2eM-U7-332"/>
+                                    <constraint firstItem="YD7-a3-QtS" firstAttribute="top" secondItem="seL-q8-5dU" secondAttribute="top" id="5tj-yJ-n0C"/>
+                                    <constraint firstAttribute="bottom" secondItem="2xH-hm-IEK" secondAttribute="bottom" id="6nA-QB-WLJ"/>
+                                    <constraint firstItem="2xH-hm-IEK" firstAttribute="leading" secondItem="seL-q8-5dU" secondAttribute="leading" id="6tK-cc-ULQ"/>
+                                    <constraint firstItem="2xH-hm-IEK" firstAttribute="top" secondItem="YD7-a3-QtS" secondAttribute="bottom" constant="20" id="97T-mN-zcw"/>
+                                    <constraint firstAttribute="trailing" secondItem="YD7-a3-QtS" secondAttribute="trailing" id="9yH-fo-JfT"/>
+                                    <constraint firstAttribute="trailing" secondItem="2xH-hm-IEK" secondAttribute="trailing" id="Iyb-hO-fGU"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="YD7-a3-QtS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="0Vd-d6-Hjw"/>
+                            <constraint firstItem="seL-q8-5dU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Bav-KK-Yxd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mJz-0P-z8b" secondAttribute="trailing" constant="30" id="C3a-NK-1bo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="seL-q8-5dU" secondAttribute="trailing" constant="30" id="DG1-3i-ipw"/>
                             <constraint firstItem="T72-SH-R7S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Gp8-RT-Fuu"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YD7-a3-QtS" secondAttribute="trailing" constant="30" id="K7r-vV-ThS"/>
                             <constraint firstItem="mJz-0P-z8b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LUW-Ep-x1P"/>
                             <constraint firstItem="mJz-0P-z8b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="aIE-SM-OTo"/>
                             <constraint firstItem="T72-SH-R7S" firstAttribute="top" secondItem="mJz-0P-z8b" secondAttribute="bottom" constant="20" id="cnE-i7-4lf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T72-SH-R7S" secondAttribute="trailing" constant="30" id="iOl-IM-9oJ"/>
-                            <constraint firstItem="YD7-a3-QtS" firstAttribute="top" secondItem="T72-SH-R7S" secondAttribute="bottom" constant="19" id="l0A-JX-Ds1"/>
+                            <constraint firstItem="seL-q8-5dU" firstAttribute="top" secondItem="T72-SH-R7S" secondAttribute="bottom" id="y32-ld-kS4"/>
+                            <constraint firstItem="seL-q8-5dU" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ySK-bi-aCq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="button" destination="2xH-hm-IEK" id="Lnt-tz-8n8"/>
                         <outlet property="errorLabel" destination="YD7-a3-QtS" id="09v-iS-hoO"/>
                         <outlet property="logLabel" destination="T72-SH-R7S" id="d5u-1f-JTM"/>
                     </connections>
